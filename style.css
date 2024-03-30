@@ -1,3 +1,7 @@
+:root {
+    --black: #313638;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,19 +13,18 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #072225;
+    background-color: #fff;
 
 }
 
 header {
-    width: 95dvw;
+    width: 100dvw;
     height: 10dvh;
-    margin-top: 2dvh;
     backdrop-filter: blur(50px) saturate(100%);
-    background-color: rgba(212, 224, 44, 0.75);
-    color: #fff;
-    border-radius: 50px;
-    border: 2px solid rgba(212, 224, 44, 0.5);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    margin-bottom: 0.5em;
+
     font-family: "Sansita", sans-serif;
 
     display: flex;
@@ -31,4 +34,183 @@ header {
 
 header > h1 {
     font-size: 24px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+/* Main/Body Content */
+
+main {
+    width: 100dvw;
+    font-family: "Sansita", sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Weather & Time */
+
+.weatherTime {
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather, .time {
+    padding: 0.5em;
+}
+
+/* Directory */
+
+.directory {
+    width: 100dvw;
+    min-height: 50dvh;
+    margin-top: 3em;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.directory > button {
+    width: 12em;
+    padding: 2em;
+    background-color: #fff;
+    color: var(--black);
+    text-align: center;
+    border: 1px solid var(--black);
+    font-weight: 700;
+    transition: 0.15s ease;
+
+    /* border: 2px solid var(--black); */
+}
+
+.directory > button:hover {
+    transform: scale(1.1);
+}
+
+/* Button Styling */
+
+.animeButton {
+    box-shadow: 5px 5px 0 #ff47da;
+}
+
+.animeButton:hover {
+    color: #ff47da;
+}
+
+.bookButton {
+    box-shadow: 5px 5px 0 #FF9800;
+}
+
+.bookButton:hover {
+    color: #FF9800;
+}
+
+.movieButton {
+    box-shadow: 5px 5px 0 #39d4ff;
+}
+
+.movieButton:hover {
+    color: #39d4ff;
+}
+
+.showButton {
+    box-shadow: 5px 5px 0 #15ff3c;
+}
+
+.showButton:hover {
+    color: #15ff3c;
+}
+
+.youtubeButton {
+    box-shadow: 5px 5px 0 #ff3f3c;
+}
+
+.youtubeButton:hover {
+    color: #ff3f3c;
+}
+
+.twitchButton {
+    box-shadow: 5px 5px 0 #6441a5;
+}
+
+.twitchButton:hover {
+    color: #6441a5;
+}
+
+/* Repository Section */
+
+.repository {
+    width: 100dvw;
+    min-height: 40dvh;
+    padding: 3em 0 3em 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    row-gap: 1em;
+}
+
+.repoHeading {
+    padding: 1em;
+}
+
+/* Repo Card */
+
+.repo {
+    width: 70dvw;
+    height: 150px;
+    padding: 0.75em;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    text-align: center;
+    /* background-color: lightgrey; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.repo > h3 {
+    
+    padding: 0.5em;
+    color: var(--black);
+    border: 2px solid var(--black);
+    border-radius: 1em;
+}
+
+.repo > p {
+    font-size: 0.75em;
+    font-style: italic;
+}
+
+.repoLinks {
+    width: 50%;
+
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.repoLinks > a {
+    text-decoration: none;
+    background-color: var(--black);
+    color: #fff;
+    font-size: 0.8em;
+    padding: 0.5em;
+    font-weight: 700;
+    border-radius: 1em;
+    border: 2px solid var(--black)
+}
+
+/* Repo Card Hover */
+
+.repoLinks > a:hover {
+    background-color: #fff;
+    color: var(--black);
 }
